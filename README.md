@@ -24,7 +24,6 @@ similares, pero que concentran más el alcohol. Por lo tanto, la graduación de 
 de cerveza roja se calcula multiplicando el valor que correspondería a una cerveza negra
 con la misma configuración, por 1.25.
 
-
 Se pide test, codificación completa, y diagrama de clases para los siguientes requerimientos:
 
 1. Saber el contenido de alcohol de una jarra de cerveza. Ej: una jarra de cerveza de medio litro de la marca `Hofbräu` (suponiendo que tiene 8 % de graduación alcohólica) tiene 0,5 * 0,08 = 0,04 litros de alcohol.
