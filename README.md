@@ -21,13 +21,13 @@ Se pide test, codificación completa, y diagrama de clases para los siguientes r
 
 3. Saber si una persona está ebria o no.
 
-4. Saber si una persona quiere entrar a una carpa, es decir, si la marca de cerveza que venda la carpe le gusta a una persona y si cumple su preferencia sobre que haya o no haya música (ojo con esto: si a la persona le gusta la música tradicional tiene que haber música en la carpa, y si no le gusta, entonces no puede hacer música). Los alemanes, además, requieren que haya una cantidad par de personas en la carpa (antes de entrar ellos).
+4. Saber si una persona quiere entrar a una carpa, es decir, si la marca de cerveza que venda la carpa le gusta a la persona y si cumple su preferencia sobre que haya o no haya música (ojo con esto: si a la persona le gusta la música tradicional tiene que haber música en la carpa, y si no le gusta, entonces no puede hacer música). Los alemanes, además, requieren que haya una cantidad par de personas en la carpa (antes de entrar ellos).
 
 5. Saber si una carpa deja ingresar a una persona, o sea, si dejándola entrar no supera su límite de personas y la persona no está ebria.
 
 6. Saber si una persona puede entrar a una carpa, es decir, si quiere entrar a la carpa y la carpa lo deja entrar.
 
-7. Que una persona entre a una carpa. Resolver la situación de una persona que quiera ingresar a una carpa y no pueda por la falla de alguna condición resuelta en los puntos anteriores (Que tire error).
+7. Que una persona entre a una carpa. Si una persona quiera ingresar a una carpa y no pueda por la falla de alguna condición resuelta en los puntos anteriores, generar un error.
 
 8. Saber cuantos ebrios empedernidos hay dentro de una carpa. Los ebrios empedernidos son los ebrios que todas las jarras que compraron, son de 1 litro ó más.
 
