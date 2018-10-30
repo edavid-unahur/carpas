@@ -29,21 +29,21 @@ La graduación de una cerveza es su porcentaje de alcohol en volumen. P.ej. una 
 
 Se pide test, codificación completa, y diagrama de clases para los siguientes requerimientos:
 
-1. Saber el contenido de alcohol de una jarra de cerveza. Ej: una jarra de cerveza de medio litro de la marca _Hofbräu_ (suponiendo que tiene 8 % de graduación alcohólica) tiene 0.5 * 0.08 = 0.04 litros de alcohol.
+1. Saber el **contenido de alcohol** de una jarra de cerveza. Ej: una jarra de cerveza de medio litro de la marca _Hofbräu_ (suponiendo que tiene 8 % de graduación alcohólica) tiene 0.5 * 0.08 = 0.04 litros de alcohol.
 
-2. Saber el total de alcohol que ingirió una persona (en base a las jarras de cerveza que compró).
+2. Saber el **total de alcohol** que ingirió una persona (en base a las jarras de cerveza que compró).
 
-3. Saber si una persona está ebria o no.
+3. Saber si una persona **está ebria** o no.
 
-4. Saber si una persona quiere entrar a una carpa. Para esto hay que mirar si la marca de cerveza que venda la carpa le gusta a la persona y si cumple su preferencia sobre que haya o no haya música (ojo con esto: si a la persona le gusta la música tradicional tiene que haber música en la carpa, y si no le gusta, entonces no puede haber música). 
+4. Saber si una persona **quiere entrar** a una carpa. Para esto hay que mirar si la marca de cerveza que venda la carpa le gusta a la persona y si cumple su preferencia sobre que haya o no haya música (ojo con esto: si a la persona le gusta la música tradicional tiene que haber música en la carpa, y si no le gusta, entonces no puede haber música). 
 Los alemanes, además, requieren que haya una cantidad par de personas en la carpa (antes de entrar ellos).
 
-5. Saber si una carpa deja ingresar a una persona, o sea, si dejándola entrar no supera su límite de personas y la persona no está ebria.
+5. Saber si una carpa **deja ingresar** a una persona, o sea, si dejándola entrar no supera su límite de personas y la persona no está ebria.
 
-6. Saber si una persona puede entrar a una carpa, es decir, si quiere entrar a la carpa y la carpa lo deja entrar.
+6. Saber si una persona **puede entrar** a una carpa, es decir, si quiere entrar a la carpa y la carpa lo deja entrar.
 
-7. Que una persona entre a una carpa. Si una persona quiera ingresar a una carpa y no puede por la falla de alguna condición resuelta en los puntos anteriores, generar un error.
+7. Hacer que una persona efectivamente **entre** a una carpa. Si una persona quiere ingresar a una carpa y no puede por la falla de alguna condición resuelta en los puntos anteriores, generar un error. Si entra, debe actualizarse la capacidad de la carpa.
 
-8. Saber cuantos ebrios empedernidos hay dentro de una carpa. Los ebrios empedernidos son los ebrios que todas las jarras que compraron, son de 1 litro ó más.
+8. Saber cuantos **ebrios empedernidos** hay dentro de una carpa. Los ebrios empedernidos son los ebrios que todas las jarras que compraron, son de 1 litro ó más.
 
-9. Saber si una persona es patriota, o sea, si todas las jarras de cerveza que compró son del país del que proviene. P.ej. un alemán es patriota si todas las jarras de cerveza que compró son alemanas.
+9. Saber si una persona **es patriota**, o sea, si todas las jarras de cerveza que compró son del país del que proviene. P.ej. un alemán es patriota si todas las jarras de cerveza que compró son alemanas.
