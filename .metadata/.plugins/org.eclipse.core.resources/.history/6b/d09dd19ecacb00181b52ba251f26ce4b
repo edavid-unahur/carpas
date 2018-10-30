@@ -1,7 +1,0 @@
-describe "etapa1" {
-	test "testX" {
-
-		assert.that(true)
-
-	}
-}
