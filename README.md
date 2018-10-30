@@ -6,7 +6,7 @@ En Münich-Alemania, todos los años se festeja la Oktubrefest. Para esta gran f
 
 Al entrar en la fiesta se pueden encontrar enormes carpas cerveceras, en donde muchísima gente se reune a . . . bueno . . . tomar cerveza. Queremos controlar la entrada a estas carpas dependiendo de la disponibilidad de la carpa y los gustos del público.
 
-## Jarras y Carpas
+### Jarras y Carpas
 Las carpas cerveceras tienen:
 * un límite de gente admitida, 
 * algunas tienen una banda para tocar música tradicional (esto debe indicarse para cada una),
@@ -14,18 +14,21 @@ Las carpas cerveceras tienen:
 
 De cada jarra de cerveza sabemos su capacidad en litros y de qué marca es. Cada carpa sirve jarras de cerveza de sólo una marca (que depende de cada carpa).
 
-## Persona
+### Personas
 De cada persona se sabe su peso, las jarras de cerveza que compró hasta el momento, si le gusta escuchar música tradicional o no, y su nivel de aguante, que es un número. Una persona está ebria si la cantidad de alcohol que ingirió multiplicado por su peso supera su aguante. 
 
 Además, de cada persona interesará saber qué marcas de cerveza le gustan. Se sabe que a los belgas les gusta solamente la cerveza con más de 4 gramos de lúpulo por litro, a los checos les gustan las cervezas de más de 8 % de graduación (ver abajo qué es la graduación de la cerveza), a los alemanes les gustan todas.
 
-## Marcas
+### Marcas
 Existen varias marcas de cerveza. Están las marcas de cerveza rubia (como la Corona), las marcas de cerveza negra (como la Guiness), y las marcas de cerveza roja (como la Hofbräu). De cada marca se sabe su contenido de lúpulo, o sea, cuántos gramos de lúpulo por litro llevan. También se conoce el país donde se fabrica.
 
 La graduación de una cerveza es su porcentaje de alcohol en volumen. P.ej. una cerveza de 10 % de graduación, tendrá 0.1 litro de alcohol por litro de cerveza: 
 * Cada marca de cerveza rubia tiene una graduación distinta. 
 * Por otro lado, la graduación de una marca de cerveza negra se calcula como el mínimo entre la graduación reglamentaria y el doble de su contenido de lúpulo. La graduación reglamentaria es mundial, o sea que es única para todas las marcas de cerveza negra del mundo; puede cambiar con el tiempo. 
 * La cerveza roja se fabrica con procedimientos similares a la de la cerveza negra, pero que concentran más el alcohol. Por lo tanto, la graduación de una marca de cerveza roja se calcula multiplicando el valor que correspondería a una cerveza negra con la misma configuración, por 1.25.
+
+
+### Requerimientos
 
 Se pide test, codificación completa, y diagrama de clases para los siguientes requerimientos:
 
