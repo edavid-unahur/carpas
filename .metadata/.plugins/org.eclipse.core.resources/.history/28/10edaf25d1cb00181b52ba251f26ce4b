@@ -1,0 +1,87 @@
+class Universidad {
+	var honorarioSugerido
+	var provincia
+	
+	method setHonorariosSugeridos(_honorarioSugerido) {
+		honorarioSugerido = _honorarioSugerido
+	}
+	
+	method getHonorariosSugeridos() {
+		return honorarioSugerido
+	}
+	
+	method getProvincia() {
+		return provincia
+	}
+	
+	method setProvincia(_provincia) {
+		provincia = _provincia
+	}
+}
+
+class Profesional {
+	var universidad
+	
+	method universidad() { return universidad }
+	method universidad(univ) { universidad = univ }
+	
+	method trabajasEn(_provincia) {
+		return self.provinciasDondePuedeTrabajar().contains(_provincia)
+	}
+}
+
+// esta clase está completa, no necesita nada más
+class ProfesionalAsociado inherits Profesional {
+	
+	method provinciasDondePuedeTrabajar() { 
+		return #{"Entre Ríos", "Corrientes", "Santa Fe"}
+	}
+	
+	method honorariosPorHora() { return 3000 }
+}
+
+
+// a esta clase le faltan métodos
+class ProfesionalVinculado inherits Profesional {
+	
+	method honorariosPorHora() { 
+		return universidad.getHonorariosSugeridos()
+	}
+	
+	method provinciasDondePuedeTrabajar() { 
+		return #{universidad.getProvincia()}
+	}
+	
+	
+}
+
+
+// a esta clase le faltan atributos y métodos
+class ProfesionalLibre inherits Profesional {
+	var honorarios
+	var provincias = #{}
+	
+	method addProvincias(_provincias) {
+		provincias.addAll(_provincias)	
+	}
+	
+	method addProvincia(_provincia) {
+		provincias.add(_provincia)	
+	}
+	
+	method setHonorarios(_honorarios) {
+		honorarios = _honorarios
+	}
+	
+	method removerProvincia(_provincia) {
+		provincias.remove(_provincia)	
+	}
+	
+	method honorariosPorHora() { 
+		return honorarios
+	}
+	
+	method provinciasDondePuedeTrabajar() { 
+		return provincias
+	}
+}

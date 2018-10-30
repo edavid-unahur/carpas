@@ -1,0 +1,52 @@
+import profesionales.*
+import Empresa.*
+
+describe "etapa1" {
+	
+	var sanMartin = new Universidad()
+	var hurligham = new Universidad()
+	var corrientes = new Universidad()
+	var rosario = new Universidad()
+	var juana = new ProfesionalVinculado()
+	var melina = new ProfesionalAsociado()
+	var rocio = new ProfesionalLibre()
+	var luciana = new ProfesionalLibre()
+	
+	var empresa = new Empresa()
+	
+	
+	fixture  {
+		sanMartin.setProvincia("Buenos Aires")
+		sanMartin.setHonorariosSugeridos(3500)
+		hurligham.setProvincia("Buenos Aires")
+		hurligham.setHonorariosSugeridos(8800)
+		rosario.setProvincia("Santa Fé")
+		rosario.setHonorariosSugeridos(2800)	
+		corrientes.setProvincia("Corrientes")
+		corrientes.setHonorariosSugeridos(4200)	
+		
+		juana.universidad(rosario)
+		melina.universidad(corrientes)
+		rocio.universidad(hurligham)
+		rocio.setHonorarios(5000)
+		rocio.addProvincias(#{"Santa Fé", "Córdoba", "Buenos Aires"})
+		luciana.universidad(rosario)
+		luciana.setHonorarios(3200)
+		luciana.addProvincias(#{"Santa Fé", "Entre Rios"})
+		
+		empresa.setHonorarioDeReferencia(3500)
+		empresa.addProfesionales(#{melina, rocio, luciana, juana})
+	}
+	
+	
+	test "profesionalesCaros" {	
+		var resultado = empresa.profesionalesCaros()	
+		assert.equals(#{rocio}, resultado)
+	}
+	
+	test "universidadesFormadoras" {	
+		var resultado = empresa.universidadesFormadoras()	
+		assert.equals(#{rosario, corrientes, hurligham}, resultado)
+	}
+	
+}

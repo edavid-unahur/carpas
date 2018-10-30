@@ -1,0 +1,29 @@
+class Empresa {
+	
+	const profesionales = #{}
+	var honorarioDeReferencia
+	
+	method setHonorarioDeReferencia(_honorarioDeReferencia) {
+		honorarioDeReferencia = _honorarioDeReferencia
+	}
+	
+	method agregarProfesionales(_profesionales) {
+		profesionales.addAll(_profesionales)
+	}
+	
+	method agregarProfesional(_profesional) {
+		profesionales.add(_profesional)
+	}
+	
+	method profesionalesCaros() {
+		return profesionales.filter({p => p.honorariosPorHora() > honorarioDeReferencia })
+	}
+	
+	method universidadesFormadoras() {
+		return profesionales.map({p => p.univerdad()})
+	}
+	
+	
+	
+	
+}

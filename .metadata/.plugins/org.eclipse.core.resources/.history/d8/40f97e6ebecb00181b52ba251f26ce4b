@@ -1,0 +1,13 @@
+class Empresa {
+	
+	const profesionales = #{}
+	var honorarioDeReferencia
+	
+	method setHonorarioDeReferencia(_honorarioDeReferencia) {
+		honorarioDeReferencia = _honorarioDeReferencia
+	}
+	
+	
+	
+	
+}
