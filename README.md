@@ -30,7 +30,7 @@ La graduación de una cerveza es su porcentaje de alcohol en volumen. P.ej. una 
 
 ### Requerimientos
 
-Se pide test, codificación completa, y diagrama de clases para los siguientes requerimientos:
+Se pide test y codificación completa para los siguientes requerimientos:
 
 1. Saber el **contenido de alcohol** de una jarra de cerveza. Ej: una jarra de cerveza de medio litro de la marca _Hofbräu_ (suponiendo que tiene 8 % de graduación alcohólica) tiene 0.5 * 0.08 = 0.04 litros de alcohol.
 
