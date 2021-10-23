@@ -1,0 +1,13 @@
+import Marcas.*
+import Personas.*
+
+describe "TestParaMascas"{
+	
+	
+	test "CervezaHofBrau" {
+	var cervezaHofbrau = new CervezaRoja()
+	assert.that(true)
+
+	}	
+}
+
