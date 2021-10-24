@@ -15,7 +15,7 @@ describe "tests de las carpas" {
 	var jarraCervezaRubia1 = new Jarra(capacidad = 1.5, marca = cervezaRubia1) // Alc : 0.108
 	var jarraCervezaRoja1 = new Jarra(capacidad = 2, marca = cervezaRoja1) // Alc : 0.25
 	// total de todas las jarras : 0.678
-	// Personas
+	// Personas.
 	var personaAlemana1 = new Aleman(nivelDeAguante = 50, musicaTradicional = true, peso = 80)
 	var personaAlemana2 = new Aleman(nivelDeAguante = 40, musicaTradicional = true, peso = 72)
 	var personaBelga1 = new Belga(nivelDeAguante = 60, musicaTradicional = true, peso = 92)
