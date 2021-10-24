@@ -48,9 +48,8 @@ class Persona {
 	}
 
 	method esCompatible(persona) {
-	 
 	}
-	
+
 }
 
 class Belga inherits Persona {
@@ -83,8 +82,8 @@ class Aleman inherits Persona {
 		return "Alemania"
 	}
 
-	// override method esCervezaPreferida(cerveza){return true} 
-	//(se me hace que este override esta de mas, ya que la clase Persona de la que hereda el metodo, retorna siempre true)
+	// override method esCervezaPreferida(cerveza){return true} .
+	// (se me hace que este override esta de mas, ya que la clase Persona de la que hereda el metodo, retorna siempre true)
 	override method quiereEntrar(carpa) {
 		return self.esCervezaPreferida(carpa.marca()) and self.escuchaMusicaTradicional() == carpa.musicosTradicionales() and carpa.cantidadDentroDeLaCarpa().even()
 	}
