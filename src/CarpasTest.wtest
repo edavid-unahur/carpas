@@ -1,0 +1,76 @@
+import Personas.*
+import Marcas.*
+import Carpas.*
+
+describe "tests de las carpas" {
+
+	// Cervezas
+	var cervezaNegra1 = new CervezaNegra(lupuloPorLitro = 6, graduacionReglamentaria = 15, pais = "Alemana")
+	var cervezaNegra2 = new CervezaNegra(lupuloPorLitro = 4, graduacionReglamentaria = 15, pais = "Alemana")
+	var cervezaRubia1 = new CervezaRubia(lupuloPorLitro = 3, graduacion = 7.2, pais = "Irlanda")
+	var cervezaRoja1 = new CervezaRoja(lupuloPorLitro = 9, graduacionReglamentaria = 10, pais = "Belgica")
+	// jarras
+	var jarraCervezaNegra1 = new Jarra(capacidad = 2, marca = cervezaNegra1) // Alc : 0.24
+	var jarraCervezaNegra2 = new Jarra(capacidad = 1, marca = cervezaNegra2) // Alc : 0.08
+	var jarraCervezaRubia1 = new Jarra(capacidad = 1.5, marca = cervezaRubia1) // Alc : 0.108
+	var jarraCervezaRoja1 = new Jarra(capacidad = 2, marca = cervezaRoja1) // Alc : 0.25
+	// total de todas las jarras : 0.678
+	// Personas
+	var personaAlemana1 = new Aleman(nivelDeAguante = 50, musicaTradicional = true, peso = 80)
+	var personaAlemana2 = new Aleman(nivelDeAguante = 40, musicaTradicional = true, peso = 72)
+	var personaBelga1 = new Belga(nivelDeAguante = 60, musicaTradicional = true, peso = 92)
+	var personaBelga2 = new Belga(nivelDeAguante = 20, musicaTradicional = false, peso = 78)
+	var personaCheca = new Checo(nivelDeAguante = 35, musicaTradicional = false, peso = 85)
+	var personaCheca2 = new Checo(nivelDeAguante = 75, musicaTradicional = true, peso = 73)
+	// Carpas
+	var carpa1 = new Carpa(limiteDePublico = 5, musicosTradicionales = true, marca = cervezaNegra1)
+	var carpa2 = new Carpa(limiteDePublico = 3, musicosTradicionales = false, marca = cervezaNegra2)
+	var carpa3 = new Carpa(limiteDePublico = 6, musicosTradicionales = false, marca = cervezaRubia1)
+	var carpa4 = new Carpa(limiteDePublico = 7, musicosTradicionales = true, marca = cervezaRoja1)
+
+	test "Test1, Aleman1, no compro nada, quiere entrar a la carpa1 con 2 personas y entra" {
+		carpa1.ingresar(personaBelga1)
+		carpa1.ingresar(personaCheca2)
+		assert.equals(2, carpa1.cantidadDentroDeLaCarpa())
+		assert.that(personaAlemana1.puedeEntrar(carpa1))
+	}
+
+	test "personaAlemana2, compro todas las marcas quiere entrar a la carpa1 con 0 personas, pero no puede" {
+		personaAlemana2.comprarCerveza(jarraCervezaNegra1)
+		personaAlemana2.comprarCerveza(jarraCervezaNegra2)
+		personaAlemana2.comprarCerveza(jarraCervezaRubia1)
+		personaAlemana2.comprarCerveza(jarraCervezaRoja1)
+		assert.notThat(personaAlemana2.puedeEntrar(carpa1))
+	}
+
+	test "personaBelga1 y personaCheca2,compraron 1 marca cada uno, no quieren entrar a la carpa2(no les gusta la marca) pero si a la carpa 4 " {
+		personaBelga1.comprarCerveza(jarraCervezaRoja1)
+		personaCheca2.comprarCerveza(jarraCervezaNegra1)
+		assert.notThat(personaBelga1.quiereEntrar(carpa2) and personaCheca2.quiereEntrar(carpa2))
+		assert.that(personaBelga1.quiereEntrar(carpa4) and personaCheca2.quiereEntrar(carpa4))
+	}
+
+	test "personaCheca2 compro 3 marcas, quiere entrar a la carpa4, pero no a la carpa3" {
+		personaCheca.comprarCerveza(jarraCervezaNegra1)
+		personaCheca.comprarCerveza(jarraCervezaNegra2)
+		personaCheca.comprarCerveza(jarraCervezaRoja1)
+		assert.that(personaCheca2.quiereEntrar(carpa4))
+		assert.notThat(personaCheca.quiereEntrar(carpa3))
+	}
+
+	test "la carpa1 tiene 3 ebrios empedernidos y no es homogenea" {
+		carpa1.ingresar(personaAlemana2)
+		carpa1.ingresar(personaBelga1)
+		carpa1.ingresar(personaAlemana1)
+		carpa1.ingresar(personaCheca2)
+		carpa1.servirCerveza(personaAlemana1, 3)
+		carpa1.servirCerveza(personaAlemana1, 4)
+		carpa1.servirCerveza(personaCheca2, 3)
+		carpa1.servirCerveza(personaCheca2, 3)
+		carpa1.servirCerveza(personaBelga1, 0.5)
+		assert.equals(3, carpa1.cantidadEbriosEmpedernidos())
+		assert.notThat(carpa1.esHomogenea())
+	}
+
+}
+

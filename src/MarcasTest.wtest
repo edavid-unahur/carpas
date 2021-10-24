@@ -1,13 +1,39 @@
 import Marcas.*
 import Personas.*
 
-describe "TestParaMascas"{
-	
-	
-	test "CervezaHofBrau" {
-	var cervezaHofbrau = new CervezaRoja()
-	assert.that(true)
+describe "TestParaMarcas" {
 
-	}	
+	// Cervezas
+	var cervezaHofbrau = new CervezaRoja(lupuloPorLitro = 3.2, graduacionReglamentaria = 10, pais = "Alemania")
+	var cervezaGuiness = new CervezaNegra(lupuloPorLitro = 5.7, graduacionReglamentaria = 15, pais = "Irlanda")
+	var cervezaCorona = new CervezaRubia(lupuloPorLitro = 1, graduacion = 4.5, pais = "Mexico")
+	// Jarras
+	var jarraHofBrau = new Jarra(capacidad = 0.5, marca = cervezaHofbrau)
+	var jarraGuiness = new Jarra(capacidad = 1, marca = cervezaGuiness)
+	var jarraCorona = new Jarra(capacidad = 1.5, marca = cervezaCorona)
+
+	test "CervezaHofBrau 8 de graduacion" {
+		assert.equals(8, cervezaHofbrau.graduacion())
+	}
+
+	test "CervezaGuiness, 11.4% de graduacion " {
+		assert.equals(11.4, cervezaGuiness.graduacion())
+	}
+
+	test "jarraDeCervezaHofBrau, Medio Litro de capacidad, 0.04 litros de alcohol" {
+		assert.equals(0.5, jarraHofBrau.capacidad())
+		assert.equals(0.04, jarraHofBrau.cantidadAlcohol())
+	}
+
+	test "jarraDeCervezaGuiness, 1 litro de capacidad, 0.114 litros de alcohol " {
+		assert.equals(1, jarraGuiness.capacidad())
+		assert.equals(0.114, jarraGuiness.cantidadAlcohol())
+	}
+
+	test "jarraDeCervezaCorona, 1.5 litros de capacidad, 0.0675 litros de alcohol" {
+		assert.equals(1.5, jarraCorona.capacidad())
+		assert.equals(0.0675, jarraCorona.cantidadAlcohol())
+	}
+
 }
 

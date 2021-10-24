@@ -5,7 +5,7 @@ class Carpa {
 	var limiteDePublico
 	var musicosTradicionales
 	var marca
-	var personas = []
+	const personas = []
 	
 	method musicosTradicionales(){return musicosTradicionales}
 	method limiteDePublico(){return limiteDePublico}
@@ -22,9 +22,15 @@ class Carpa {
 			self.error("No pudo ingresar.")
 		}
 	}
-	method servirCerveza(persona, capacidad){
-		const jarrita = new Jarra(marca=marca, capacidad=capacidad)
-		persona.comprarCerveza(jarrita)
+	method servirCerveza(persona, capacidadDeJarra){
+		
+		const jarrita = new Jarra(capacidad = capacidadDeJarra, marca = marca)
+		
+		if(personas.contains(persona)){
+		  persona.comprarCerveza(jarrita)
+		}
+		else self.error("la persona no esta dentro de la carpa")
+		
 	}
 	method cantidadEbriosEmpedernidos(){
 		return personas.filter({persona => persona.jarrasCompradas().all({jarra => jarra.capacidad() >= 1})}).size()
