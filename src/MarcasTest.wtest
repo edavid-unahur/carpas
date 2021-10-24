@@ -4,13 +4,13 @@ import Personas.*
 describe "TestParaMarcas" {
 
 	// Cervezas
-	var cervezaHofbrau = new CervezaRoja(lupuloPorLitro = 3.2, graduacionReglamentaria = 10, pais = "Alemania")
-	var cervezaGuiness = new CervezaNegra(lupuloPorLitro = 5.7, graduacionReglamentaria = 15, pais = "Irlanda")
-	var cervezaCorona = new CervezaRubia(lupuloPorLitro = 1, graduacion = 4.5, pais = "Mexico")
+	var cervezaHofbrau = new CervezaRoja(lupuloPorLitro = 3.2, graduacionReglamentaria = 10, precioPorLitro = 10, pais = "Alemania")
+	var cervezaGuiness = new CervezaNegra(lupuloPorLitro = 5.7, graduacionReglamentaria = 15, precioPorLitro = 20, pais = "Irlanda")
+	var cervezaCorona = new CervezaRubia(lupuloPorLitro = 1, graduacion = 4.5, precioPorLitro = 40, pais = "Mexico")
 	// Jarras
-	var jarraHofBrau = new Jarra(capacidad = 0.5, marca = cervezaHofbrau)
-	var jarraGuiness = new Jarra(capacidad = 1, marca = cervezaGuiness)
-	var jarraCorona = new Jarra(capacidad = 1.5, marca = cervezaCorona)
+	var jarraHofBrau = new Jarra(capacidad = 0.5, carpa="carpa1", marca = cervezaHofbrau)
+	var jarraGuiness = new Jarra(capacidad = 1, carpa="carpa2", marca = cervezaGuiness)
+	var jarraCorona = new Jarra(capacidad = 1.5,carpa="carpa3", marca = cervezaCorona)
 
 	test "CervezaHofBrau 8 de graduacion" {
 		assert.equals(8, cervezaHofbrau.graduacion())

@@ -1,10 +1,12 @@
 class MarcaDeCerveza {
 	var lupuloPorLitro
 	var pais
+	var precioPorLitro
 	
 	method lupuloPorLitro(){return lupuloPorLitro}
 	method pais(){return pais}
 	method graduacion() {return 1}
+	method precioPorLitro(){return precioPorLitro}
 }
 
 class CervezaRubia inherits MarcaDeCerveza{
@@ -32,9 +34,12 @@ class CervezaRoja inherits MarcaDeCerveza{
 class Jarra {
 	var capacidad
 	var marca
+	var carpa
 	
 	method capacidad(){return capacidad}
+	method carpa(){return carpa}
 	method marca(){return marca}
+	method precio(){return capacidad * carpa.precio()}
 	method cantidadAlcohol(){return capacidad * (marca.graduacion()/100)}
 }
 
