@@ -5,15 +5,15 @@ import Carpas.*
 describe "tests de las carpas" {
 
 	// Cervezas
-	var cervezaNegra1 = new CervezaNegra(lupuloPorLitro = 6, graduacionReglamentaria = 15, pais = "Alemana")
-	var cervezaNegra2 = new CervezaNegra(lupuloPorLitro = 4, graduacionReglamentaria = 15, pais = "Alemana")
-	var cervezaRubia1 = new CervezaRubia(lupuloPorLitro = 3, graduacion = 7.2, pais = "Irlanda")
-	var cervezaRoja1 = new CervezaRoja(lupuloPorLitro = 9, graduacionReglamentaria = 10, pais = "Belgica")
+	var cervezaNegra1 = new CervezaNegra(lupuloPorLitro = 6, graduacionReglamentaria = 15,precioPorLitro = 30, pais = "Alemana")
+	var cervezaNegra2 = new CervezaNegra(lupuloPorLitro = 4, graduacionReglamentaria = 15,precioPorLitro = 20, pais = "Alemana")
+	var cervezaRubia1 = new CervezaRubia(lupuloPorLitro = 3, graduacion = 7.2,precioPorLitro = 40, pais = "Irlanda")
+	var cervezaRoja1 = new CervezaRoja(lupuloPorLitro = 9, graduacionReglamentaria = 10, precioPorLitro = 35, pais = "Belgica")
 	// jarras
-	var jarraCervezaNegra1 = new Jarra(capacidad = 2, marca = cervezaNegra1) // Alc : 0.24
-	var jarraCervezaNegra2 = new Jarra(capacidad = 1, marca = cervezaNegra2) // Alc : 0.08
-	var jarraCervezaRubia1 = new Jarra(capacidad = 1.5, marca = cervezaRubia1) // Alc : 0.108
-	var jarraCervezaRoja1 = new Jarra(capacidad = 2, marca = cervezaRoja1) // Alc : 0.25
+	var jarraCervezaNegra1 = new Jarra(capacidad = 2, marca = cervezaNegra1, carpa = "carpa1") // Alc : 0.24
+	var jarraCervezaNegra2 = new Jarra(capacidad = 1, marca = cervezaNegra2, carpa = "carpa2") // Alc : 0.08
+	var jarraCervezaRubia1 = new Jarra(capacidad = 1.5, marca = cervezaRubia1, carpa = "carpa3") // Alc : 0.108
+	var jarraCervezaRoja1 = new Jarra(capacidad = 2, marca = cervezaRoja1, carpa = "carpa4") // Alc : 0.25
 	// total de todas las jarras : 0.678
 	// Personas.
 	var personaAlemana1 = new Aleman(nivelDeAguante = 50, musicaTradicional = true, peso = 80)
@@ -71,6 +71,5 @@ describe "tests de las carpas" {
 		assert.equals(3, carpa1.cantidadEbriosEmpedernidos())
 		assert.notThat(carpa1.esHomogenea())
 	}
-
 }
 

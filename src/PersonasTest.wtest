@@ -4,33 +4,33 @@ import Personas.*
 describe "Tests de las Personas" {
 
 	// Personas
-	var erika = new Aleman(nivelDeAguante = 3, musicaTradicional = false, peso = 72)
-	var victor = new Belga(nivelDeAguante = 1, musicaTradicional = true, peso = 86)
-	var manolo = new Checo(nivelDeAguante = 4, musicaTradicional = true, peso = 90)
+	var erika = new Aleman(nivelDeAguante = 19, musicaTradicional = false, peso = 72)
+	var victor = new Belga(nivelDeAguante = 20, musicaTradicional = true, peso = 86)
+	var manolo = new Checo(nivelDeAguante = 34, musicaTradicional = true, peso = 90)
 	// Cervezas
 	// Cervezas Alemanas
-	var cervezaHofbrau = new CervezaRoja(lupuloPorLitro = 3.2, graduacionReglamentaria = 10, pais = "Alemania")
-	var cervezaBerlin = new CervezaNegra(lupuloPorLitro = 6, graduacionReglamentaria = 10, pais = "Alemania")
-	var cervezaWeisse = new CervezaRubia(lupuloPorLitro = 4, graduacion = 3.8, pais = "Alemania")
+	var cervezaHofbrau = new CervezaRoja(lupuloPorLitro = 3.2, graduacionReglamentaria = 10, precioPorLitro = 25, pais = "Alemania")
+	var cervezaBerlin = new CervezaNegra(lupuloPorLitro = 6, graduacionReglamentaria = 10, precioPorLitro = 20, pais = "Alemania")
+	var cervezaWeisse = new CervezaRubia(lupuloPorLitro = 8, graduacion = 3.8, precioPorLitro = 30, pais = "Alemania")
 	// Cervezas Checas
-	var cervezaCheca1 = new CervezaNegra(lupuloPorLitro = 2, graduacionReglamentaria = 15, pais = "Checoslovakya")
-	var cervezaCheca2 = new CervezaRubia(lupuloPorLitro = 3, graduacion = 5, pais = "Checoslovakya")
+	var cervezaCheca1 = new CervezaNegra(lupuloPorLitro = 2, graduacionReglamentaria = 15, precioPorLitro = 36, pais = "Checoslovakya")
+	var cervezaCheca2 = new CervezaRubia(lupuloPorLitro = 3, graduacion = 5, precioPorLitro = 40, pais = "Checoslovakya")
 	// Cervezas Belgas
-	var cervezaBelga1 = new CervezaRoja(lupuloPorLitro = 3.2, graduacionReglamentaria = 10, pais = "Belgica")
-	var cervezaBelga2 = new CervezaRubia(lupuloPorLitro = 1, graduacion = 4.7, pais = "Belgica")
+	var cervezaBelga1 = new CervezaRoja(lupuloPorLitro = 3.2, graduacionReglamentaria = 10, precioPorLitro = 10, pais = "Belgica")
+	var cervezaBelga2 = new CervezaRubia(lupuloPorLitro = 1, graduacion = 4.7, precioPorLitro = 50, pais = "Belgica")
 	// otrasMarcas
-	var cervezaGuiness = new CervezaNegra(lupuloPorLitro = 5.7, graduacionReglamentaria = 15, pais = "Irlanda")
-	var cervezaCorona = new CervezaRubia(lupuloPorLitro = 1, graduacion = 4.5, pais = "Mexico")
+	var cervezaGuiness = new CervezaNegra(lupuloPorLitro = 5.7, graduacionReglamentaria = 15, precioPorLitro = 30, pais = "Irlanda")
+	var cervezaCorona = new CervezaRubia(lupuloPorLitro = 1, graduacion = 4.5, precioPorLitro = 60, pais = "Mexico")
 	// Jarras 
-	var jarraHofBrau = new Jarra(capacidad = 0.5, marca = cervezaHofbrau) // Alc:0.04
-	var jarraGuiness = new Jarra(capacidad = 1, marca = cervezaGuiness) // Alc: 0.114
-	var jarraCorona = new Jarra(capacidad = 1.5, marca = cervezaCorona) // Alc: 0.0675
-	var jarraBerlin = new Jarra(capacidad = 2.5, marca = cervezaBerlin) // Alc: 0.25
-	var jarraWeisse = new Jarra(capacidad = 0.5, marca = cervezaWeisse) // Alc: 0.019
-	var jarraCheca1 = new Jarra(capacidad = 3, marca = cervezaCheca1) // Alc: 0.12
-	var jarraCheca2 = new Jarra(capacidad = 1.5, marca = cervezaCheca2) // Alc:0.075
-	var jarraBelga2 = new Jarra(capacidad = 3, marca = cervezaBelga2) // Alc: 0.141
-	var jarraBelga1 = new Jarra(capacidad = 1, marca = cervezaBelga1) // Alc: 0.08
+	var jarraHofBrau = new Jarra(capacidad = 0.5, carpa = "carpa1", marca = cervezaHofbrau) // Alc:0.04
+	var jarraGuiness = new Jarra(capacidad = 1, carpa = "carpa1", marca = cervezaGuiness) // Alc: 0.114
+	var jarraCorona = new Jarra(capacidad = 1.5, carpa = "carpa1", marca = cervezaCorona) // Alc: 0.0675
+	var jarraBerlin = new Jarra(capacidad = 2.5, carpa = "carpa1", marca = cervezaBerlin) // Alc: 0.25
+	var jarraWeisse = new Jarra(capacidad = 0.5, carpa = "carpa1", marca = cervezaWeisse) // Alc: 0.019
+	var jarraCheca1 = new Jarra(capacidad = 3, carpa = "carpa1", marca = cervezaCheca1) // Alc: 0.12
+	var jarraCheca2 = new Jarra(capacidad = 1.5, carpa = "carpa1", marca = cervezaCheca2) // Alc:0.075
+	var jarraBelga2 = new Jarra(capacidad = 3, carpa = "carpa1", marca = cervezaBelga2) // Alc: 0.141
+	var jarraBelga1 = new Jarra(capacidad = 1, carpa = "carpa1", marca = cervezaBelga1) // Alc: 0.08
 
 //total de todas las jarras: 0.9065
 	method initialize() {
@@ -57,13 +57,13 @@ describe "Tests de las Personas" {
 		assert.that(erika.estaEbria())
 		assert.notThat(erika.escuchaMusicaTradicional())
 		assert.that(erika.esPatriota())
-		assert.equals(3, erika.nivelDeAguante())
+		assert.equals(19, erika.nivelDeAguante())
 		assert.equals(0.309, erika.totalAlcohol())
 	}
 
 	test "Test de Victor" {
-		assert.notThat(victor.esCervezaPreferida(cervezaWeisse))
-		assert.that(victor.estaEbria())
+		assert.notThat(victor.esCervezaPreferida(cervezaHofbrau))
+		assert.notThat(victor.estaEbria())
 		assert.that(victor.escuchaMusicaTradicional())
 		assert.notThat(victor.esPatriota())
 		assert.equals(0.154, victor.totalAlcohol())
@@ -75,6 +75,21 @@ describe "Tests de las Personas" {
 		assert.that(manolo.escuchaMusicaTradicional())
 		assert.notThat(manolo.esPatriota())
 		assert.equals(0.9065, manolo.totalAlcohol())
+	}
+
+	test "Erika es compatible con victor, pero no con manolo" {
+		assert.that(erika.esCompatible(victor))
+		assert.notThat(erika.esCompatible(manolo))
+	}
+
+	test "victor no es compatible con manolo, ni manolo con victor" {
+		assert.notThat(victor.esCompatible(manolo))
+		assert.notThat(manolo.esCompatible(victor))
+	}
+
+	test "erika y victor no estan entrando en el vicio, pero manolo si" {
+		assert.notThat(erika.entrandoAlVicio() and manolo.entrandoAlVicio())
+		assert.that(victor.entrandoAlVicio())
 	}
 
 }

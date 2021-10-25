@@ -6,16 +6,16 @@ class Persona {
 	var nivelDeAguante
 	const musicaTradicional
 	const peso
-	
 
 	method comprarCerveza(jarra) {
 		jarrasCompradas.add(jarra)
 	}
-	
-	method entrandoAlVicio(jarra){
-		return self.jarrasCompradas().last().capacidad() <= jarra.capacidad()
+
+	method entrandoAlVicio() {
+		const jarrasOrdenadas = jarrasCompradas.sortedBy{ a , b => a.capacidad() < b.capacidad() }
+		return jarrasCompradas == jarrasOrdenadas
 	}
-	
+
 	method estaEbria() {
 		return self.totalAlcohol() * peso > nivelDeAguante
 	}
@@ -55,32 +55,33 @@ class Persona {
 	method esCompatible(persona) {
 		return self.cervezasEnComunCon(persona) > self.cervezasDiferentes(persona)
 	}
-	
-	method cervezasEnComunCon(persona){
-		return self.jarrasCompradas().filter({jarras => persona.esCervezaPreferida(jarras.marca())}).size()
+
+	method cervezasEnComunCon(persona) {
+		return self.jarrasCompradas().filter({ jarras => persona.esCervezaPreferida(jarras.marca()) }).size()
 	}
-	
-	method cervezasDiferentes(persona){
+
+	method cervezasDiferentes(persona) {
 		return self.jarrasCompradas().size() - self.cervezasEnComunCon(persona)
 	}
-	
-	method carpasDondeSeCompro(){
-		return self.jarrasCompradas().map({jarras => jarras.carpa()}) 
+
+	method carpasDondeSeCompro() {
+		return self.jarrasCompradas().map({ jarras => jarras.carpa() })
 	}
-	
-	method gastoTotalEnCerverza(){
-		return self.jarrasCompradas().sum({jarras => jarras.precio()})
+
+	method gastoTotalEnCerverza() {
+		return self.jarrasCompradas().sum({ jarras => jarras.precio() })
 	}
-	
-	method jarraMasCara(){
-		return self.jarrasCompradas().max({jarras => jarras.precio()})
+
+	method jarraMasCara() {
+		return self.jarrasCompradas().max({ jarras => jarras.precio() })
 	}
+
 }
 
 class Belga inherits Persona {
 
 	override method pais() {
-		return "Belgic  a"
+		return "Belgica"
 	}
 
 	override method esCervezaPreferida(cerveza) {
